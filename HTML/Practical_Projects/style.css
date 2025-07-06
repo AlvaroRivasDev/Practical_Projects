@@ -19,6 +19,7 @@ h1 {
 
 /*--Regla 3: Estilizar todos los parrafos la etiqueta p --*/
 p {
+    
     font-size: 1em; /*--aumenta el tamano de la fuente de los parrafos--*/
     margin-bottom: 20px;/*-- anade un margen en la parte inferior del parrafo --*/
 }
@@ -28,4 +29,78 @@ img {
 max-width: 100%;/**--la imagen no sera mas ancha que su contenedor--**/
 height: auto;/**--mantiene la porcion de la imagen automatizada--**/
 display: block;/**--Elimina un pequeno espacio en blanco que a veces aparece abajo--**/
+}
+
+/* --- Selectores de Clase --- */
+.galeria-fotos {
+    display: flex;          /* Esto lo veremos más adelante (Flexbox), pero permite que las fotos se organicen en fila */
+    justify-content: center; /* Centra las fotos horizontalmente */
+    flex-wrap: wrap;        /* Permite que las fotos pasen a la siguiente línea si no caben */
+    gap: 20px;              /* Añade un espacio de 20px entre las fotos */
+    padding: 20px;          /* Añade un relleno interno al contenedor de la galería */
+}
+
+.foto-item {
+    background-color: #ffffff;      /* Fondo blanco para cada ítem de foto */
+    border: 1px solid #ddd;         /* Borde gris claro alrededor del ítem */
+    border-radius: 8px;             /* Bordes ligeramente redondeados */
+    padding: 15px;                  /* Relleno interno para el contenido de la foto-item */
+    text-align: center;             /* Centra el texto y la imagen dentro del ítem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Una sombra suave para dar profundidad */
+    width: 180px;                   /* Ancho fijo para cada ítem de foto */
+}
+
+/* Aplica a la foto-item que también tiene la clase 'destacada' */
+.destacada {
+    border: 3px solid #e74c3c;      /* Borde rojo más grueso */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.02);         /* Agranda ligeramente el ítem */
+    transition: all 0.3s ease;      /* Hace que el cambio sea suave (transición) */
+}
+
+/* --- Selector de ID --- */
+footer {
+    background-color: #34495e;  /* Fondo azul grisáceo oscuro para el footer */
+    color: white;               /* Color de texto blanco */
+    text-align: center;         /* Centra el texto */
+    padding: 20px 0;            /* Relleno arriba y abajo, sin relleno a los lados */
+    margin-top: 30px;           /* Margen superior para separarlo del contenido anterior */
+}
+
+/* Aplica solo al párrafo con el ID 'contacto' */
+#contacto {
+    font-weight: bold;          /* Texto en negrita */
+    color: #ecf0f1;             /* Color blanco muy claro */
+    text-decoration: underline; /* Subraya el texto */
+}
+
+/* --- Selectores Combinados/Descendientes --- */
+/* Aplica solo a párrafos que están dentro de un elemento con la clase 'foto-item' */
+.foto-item p {
+    font-size: 0.9em;           /* Tamaño de fuente más pequeño para estos párrafos */
+    color: #7f8c8d;             /* Color gris más claro */
+    margin-top: 10px;           /* Margen superior */
+}
+
+/* Aplica solo a párrafos que están dentro de la etiqueta 'footer' */
+footer p {
+    font-size: 0.85em;          /* Tamaño de fuente aún más pequeño */
+    margin: 5px 0;              /* Margen pequeño arriba y abajo */
+}
+
+
+p {
+    color: blue; /* Intentará hacer todos los párrafos azules */
+}
+
+/* 2. Estilo para cualquier elemento con la clase 'parrafo-interno' (Especificidad: 10) */
+.parrafo-interno {
+    color: orange; /* Intentará hacer este párrafo naranja */
+}
+
+/* 3. Estilo para cualquier párrafo DENTRO de un elemento con el ID 'contenedor-desafio' (Especificidad: 100 + 1 = 101) */
+#contenedor-desafio p {
+    color: red; /* Intentará hacer este párrafo rojo */
+    font-weight: bold; /* También lo pondrá en negrita */
+    font-size: 1.5em; /* Y lo hará más grande */
 }
