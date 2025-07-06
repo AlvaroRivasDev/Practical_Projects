@@ -1,0 +1,31 @@
+/*-- Regla 1: Estilizar todos el cuerpo de la pagina --*/
+
+body {
+    font-family: Arial, sans-serif;/*--cambia el tipo de letra a la arial--*/
+    background-color: #f4f4f4; /*--Pone un color de fondo gris ckaro a toda la pagina--*/
+    color: #333;/*--establece el color de texto general a un gris--*/
+    margin: 0;/*--elimina el margen predeterminado que suele tener los navegadores--*/
+    padding: 0; /*--elimina el relleno predeterminado--*/
+}
+
+/*--Regla 2: Estilizar todos los encabezados de nivel 1 la etiqueta h1--*/
+
+h1 {
+    color: #2c3e50;  /*--Cambia el color del texto del h1 a azul--*/
+    text-align:center; /*--centra el texto h1--*/
+    padding: 20px;/*--anade relleno interno de 20px alrevedor del h1--*/
+    background-color: #ecf0f1;/*--pone un fondo gris claro al h1--*/
+}
+
+/*--Regla 3: Estilizar todos los parrafos la etiqueta p --*/
+p {
+    font-size: 1em; /*--aumenta el tamano de la fuente de los parrafos--*/
+    margin-bottom: 20px;/*-- anade un margen en la parte inferior del parrafo --*/
+}
+
+/*--Regla 4 Asegurar que las imagenes esteen bien ajusten al ancho de su contenedor--*/
+img {
+max-width: 100%;/**--la imagen no sera mas ancha que su contenedor--**/
+height: auto;/**--mantiene la porcion de la imagen automatizada--**/
+display: block;/**--Elimina un pequeno espacio en blanco que a veces aparece abajo--**/
+}
