@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Jason Fernely Barceló Ortiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <!-- Ya no necesito este cdn ya que ahora tengo la libreria localmente usando npm -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    /> -->
+    <!-- Libreria de css -->
+    <!-- 
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="node_modules/eins-modal/dist/css/eins-modal.min.css" /> -->
+
+    <!-- Ahora utlizo esta de aqui arriba -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200&family=Montserrat&display=swap"
+    />
+    <!-- Ya no usamos estos links de abajo ya que ahora podemos usar webpack y juntar todo en un index.css -->
+    <!-- <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="assets/css//experience.css" />
+    <link rel="stylesheet" href="assets/css//fonts.css" />
+    <link rel="stylesheet" href="assets/css//header.css" />
+    <link rel="stylesheet" href="assets/css//main.css" />
+    <link rel="stylesheet" href="assets/css//nav.css" />
+    <link rel="stylesheet" href="assets/css//portfolio.css" />
+    <link rel="stylesheet" href="assets/css//sections.css" />
+    <link rel="stylesheet" href="assets/css//skillset.css" />
+    <link rel="stylesheet" href="assets/css//utils.css" /> -->
+  </head>
+
+  <body>
+    <header>
+      <img class="circle" src="assets/img/logos/large.png" alt="large logo" />
+      <h1>Jason Fernely Barceló Ortiz</h1>
+      <hr />
+      <h2>Fullstack Software Engineer</h2>
+      <video autoplay loop muted>
+        <source src="assets/video/hero.mp4" />
+      </video>
+    </header>
+    <!-- NavBar -->
+    <nav id="navbar" class="navbar-fixed">
+      <div>
+        <a href="/">
+          <img
+            class="circle"
+            src="assets/img/logos/small.png"
+            alt="small logo"
+          />
+          <span
+            >Jason Fernely Barceló Ortiz <small>Software Engineer</small></span
+          >
+        </a>
+        <button id="hamburger">☰</button>
+      </div>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skillset">Skillset</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="portfolio">
+        <h3>Portfolio</h3>
+        <hr />
+        <div>
+          <button>
+            <img src="assets/img/portfolio/1.png" alt="Experiencia 1" />
+            <h4>Jolly Christmas' Website</h4>
+          </button>
+        </div>
+      </section>
+      <section id="skillset" class="even">
+        <h3>Skillset</h3>
+        <hr />
+        <div>
+          <div>
+            <img src="assets/img/skillset/html.svg" alt="Html Logo" />
+            <span class="tooltip">HTML</span>
+          </div>
+          <div>
+            <img src="assets/img/skillset/css.svg" alt="css Logo" />
+            <span class="tooltip">CCS</span>
+          </div>
+          <div>
+            <img src="assets/img/skillset/js.svg" alt="js Logo" />
+            <span class="tooltip">JavaScript</span>
+          </div>
+          <div>
+            <img src="assets/img/skillset/bash.svg" alt="Bash Logo" />
+            <span class="tooltip">Bash</span>
+          </div>
+          <div>
+            <img src="assets/img/skillset/git.svg" alt="Git Logo" />
+            <span class="tooltip">Git</span>
+          </div>
+          <div>
+            <img src="assets/img/skillset/webpack.svg" alt="webpack Logo" />
+            <span class="tooltip">Webpack</span>
+          </div>
+          <div>
+            <img src="assets/img/skillset/node.svg" alt="Node Logo" />
+            <span class="tooltip">Node</span>
+          </div>
+          <div>
+            <img src="assets/img/skillset/netlify.svg" alt="Netlify Logo" />
+            <span class="tooltip">Netlify</span>
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <h3>Experience</h3>
+        <hr />
+        <div>
+          <a data-modal-id="myModal">
+            <img src="assets/img/experience/1.svg" alt="Academia X" />
+            <h4>&copy;AcademiaX Certified "Fullstack Developer"</h4>
+          </a>
+        </div>
+        <div>
+          <a data-modal-id="myModal">
+            <img
+              src="assets/img/experience/2.svg"
+              alt="Certificate Azure z900"
+            />
+            <h4>&copy;Microsoft Certified "Azure Fundamentals"</h4>
+          </a>
+        </div>
+      </section>
+    </main>
+    <section id="contact" class="even">
+      <h3>Contact</h3>
+      <hr />
+      <form action="https://formspree.io/f/xqknbvnr" method="POST">
+        <label>
+          Your email:
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+      </form>
+      <nav id="social-media">
+        <a
+          href="https://www.linkedin.com/in/jason-barcel%C3%B3-ortiz-049a141b6"
+        >
+          <img
+            id="linkedin"
+            src="assets/img/social/linkedin.png"
+            alt="Linked Logo"
+          />
+        </a>
+        <a href="https://github.com/Dioscelestial">
+          <img
+            id="github"
+            src="assets/img/social/github.png"
+            alt="github Logo"
+          />
+        </a>
+        <a href="https://www.youtube.com/channel/UC0B_WuvJkblVWKQWSkiyelw">
+          <img
+            id="youtube"
+            src="assets/img/social/youtube.png"
+            alt="youtube Logo"
+          />
+        </a>
+      </nav>
+    </section>
+    <footer>
+      <small
+        >Developed and designed by Jason Barceló Ortiz student of Academia X
+        &copy;2021. All rights reserved;</small
+      >
+    </footer>
+    <!-- Modal usando eins-modal -->
+    <div
+      id="myModal"
+      class="eins-modal eins-modal-sm"
+      data-options="openDuration: 300;"
+    >
+      <div class="eins-modal-content">
+        Este es el uso de un modal usando una libreria externa de npm
+
+        <br />
+        <button
+          style="display: inline-block"
+          class="eins-modal-close-button btn btn-success btn-pf"
+        >
+          OK
+        </button>
+      </div>
+    </div>
+    <!-- Ya no son necesarios estos archivos ya que usamos 'webpack'
+      <script src="assets/js/fixed.js"></script>
+    <script src="assets/js/hamburguesa.js"></script> 
+
+    <script src="node_modules/eins-modal/dist/js/eins-modal.min.js"></script> 
+      Libreria npm de JS -->
+  </body>
+</html>
