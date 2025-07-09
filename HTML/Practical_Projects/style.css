@@ -1,4 +1,17 @@
-/*-- Regla 1: Estilizar todos el cuerpo de la pagina --*/
+/*-- Regla 1: Estilizar todos el cuerpo de la pagina
+Sintaxis selector/etiqueta: nombre-de-etiqueta { propiedad: valor; }Especifidad: 1
+(ej. p { color: blue; }) 
+
+sintaxys class: .nombre-clase { propiedad: valor; } Especifidad: 10
+(ej. .mi-boton { background-color: green; })
+
+sintaxis ID: #nombre-id { propiedad: valor; }  Especifidad: 100
+(ej. #encabezado-principal { font-size: 3em; })
+
+sintaxis selectores combinados: selector-padre selector-hijo { propiedad: valor; } especificidad 101
+(ej. div p { font-style: italic; }, #contenedor .item { border: 1px solid black; })
+
+--*/
 
 body {
     font-family: Arial, sans-serif;/*--cambia el tipo de letra a la arial--*/

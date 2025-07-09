@@ -1,14 +1,121 @@
+/* style.css */
+
+/* --- Regla 1: Estilizar el cuerpo de la página (la etiqueta 'body') --- */
 body {
-
-}
-header {
-
-}
-
-main{
-
+    font-family: Arial, sans-serif; /* Cambia el tipo de letra */
+    background-color: #f4f4f4;    /* Pone un color de fondo gris claro */
+    color: #333;                  /* Color de texto general */
+    margin: 0;                    /* Elimina margen predeterminado */
+    padding: 0;                   /* Elimina relleno predeterminado */
 }
 
-footer{
-    
+/* --- Regla 2: Estilizar todos los encabezados de nivel 1 (la etiqueta 'h1') --- */
+h1 {
+    color: #2c3e50;             /* Color del h1 */
+    text-align: center;         /* Centra el texto */
+    padding: 20px;              /* Relleno interno */
+    background-color: #ecf0f1;  /* Fondo del h1 */
+}
+
+/* --- Regla 3: Estilizar todos los párrafos (la etiqueta 'p'). Este será sobrescrito más abajo. --- */
+p {
+    color: blue; /* ¡Intentará hacer todos los párrafos azules! (Especificidad: 1) */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* --- Regla 4: Asegurar que las imágenes se ajusten --- */
+img {
+    max-width: 100%;            /* No más ancha que su contenedor */
+    height: auto;               /* Mantiene la proporción */
+    display: block;             /* Elimina espacio extra debajo */
+}
+
+/* --- Selectores de Clase --- */
+.galeria-fotos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.foto-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 180px;
+}
+
+/* Aplica a la foto-item que también tiene la clase 'destacada' */
+.destacada {
+    border: 3px solid #e74c3c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* Aplica a un párrafo específico con la clase 'parrafo-importante' (Especificidad: 10) */
+.parrafo-importante {
+    color: green; /* ¡Este párrafo será verde! */
+    font-weight: bold;
+    background-color: lightyellow;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block; /* Para que el fondo solo abarque el texto */
+}
+
+/* Aplica a cualquier elemento con la clase 'parrafo-interno' (Especificidad: 10) */
+.parrafo-interno {
+    color: orange; /* Intentará hacer este párrafo naranja */
+}
+
+/* --- Selector de ID --- */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Aplica solo al párrafo con el ID 'contacto' */
+#contacto {
+    font-weight: bold;
+    color: #ecf0f1;
+    text-decoration: underline;
+}
+
+/* --- Selectores Combinados/Descendientes --- */
+/* Aplica solo a párrafos que están dentro de un elemento con la clase 'foto-item' */
+.foto-item p {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+/* Aplica solo a párrafos que están dentro de la etiqueta 'footer' */
+footer p {
+    font-size: 0.85em;
+    margin: 5px 0;
+}
+
+/* ¡DESAFÍO DE ESPECIFICIDAD CLAVE! */
+/* Estilo para cualquier párrafo DENTRO de un elemento con el ID 'contenedor-desafio' (Especificidad: 100 + 1 = 101) */
+#contenedor-desafio p {
+    color: red; /* ¡Este párrafo será rojo! */
+    font-weight: bold; /* También lo pondrá en negrita */
+    font-size: 1.5em; /* Y lo hará más grande */
+    background-color: #ffe6e6; /* Fondo para que destaque */
+    padding: 10px;
+    border: 2px dashed red;
+}
+
+/* Otra regla general para P, definida al final (Especificidad: 1).
+   Demuestra la Cascada cuando la Especificidad es la misma. */
+p {
+    color: purple; /* ¡Los párrafos con especificidad 1 serán morados! */
 }

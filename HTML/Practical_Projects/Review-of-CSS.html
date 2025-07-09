@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repaso de CSS: Mi Perfil/Producto</title>
-    <link rel="stylesheet" href="Review-of-CSS.css"> </head>
+    <title>Mi Primera Página con Estilo</title>
+    <!-- ¡LA LÍNEA CLAVE! Esto enlaza tu archivo CSS -->
+    <link rel="stylesheet" href="Review-of-CSS.css">
+</head>
+
 <body>
+    <h1>¡Bienvenido a mi Galería de Arte Digital!</h1>
+    <p>Explora algunas de mis creaciones favoritas.</p>
+    <p class="parrafo-importante">Este párrafo es muy importante y queremos destacarlo.</p> <!-- Párrafo con una clase -->
 
-    <header>
-        <h1>Mi Portafolio / Catálogo</h1>
-    </header>
+    <div id="contenedor-desafio"> <!-- DIV con ID para el desafío de especificidad -->
+        <p class="parrafo-interno">Este es un párrafo dentro de un contenedor con ID.</p> <!-- Párrafo con clase dentro del DIV -->
+    </div>
 
-    <main>
-        <div id="perfil-card"> <img class="avatar" src="https://via.placeholder.com/120/4CAF50/FFFFFF?text=Tu+Foto" alt="Foto de perfil o producto">
-            <h2 class="nombre-principal">Nombre del Usuario / Producto</h2>
-            <p>Soy un entusiasta del desarrollo web y la programación.</p>
-            <p class="descripcion-corta">Me encanta aprender y construir cosas nuevas. ¡Siempre buscando desafíos!</p>
-
-            <div class="habilidades-seccion"> <h3>Habilidades Clave / Características</h3>
-                <ul>
-                    <li class="habilidad-item">HTML (5 estrellas)</li>
-                    <li class="habilidad-item">CSS (4 estrellas)</li>
-                    <li>JavaScript (en progreso)</li>
-                    <li id="destacada-habilidad">Resolución de Problemas</li> </ul>
-            </div>
-
-            <button class="btn-primario">Ver Perfil Completo</button>
-            <button class="btn-secundario">Contacto</button>
+    <section class="galeria-fotos">
+        <div class="foto-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RelOZo0DjvnGzsM-JPn59WdtMGK6s-b4rw&s" alt="Descripción de la Foto 1">
+            <p>Un paisaje vibrante.</p>
         </div>
-    </main>
+        <div class="foto-item destacada">
+            <img src="https://www.blogdelfotografo.com/wp-content/uploads/2017/02/3257609468_2d335a8a67_o.jpg" alt="Descripción de la Foto 2">
+            <p>Retrato con luz dramática.</p>
+        </div>
+        <div class="foto-item">
+            <img src="data:image/jpeg;base64,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" alt="Descripción de la Foto 3">
+            <p>Naturaleza muerta contemporánea.</p>
+        </div>
+    </section>
 
     <footer>
-        <p>¡Gracias por visitar! &copy; 2025</p>
+        <p>Derechos reservados &copy; 2025</p>
+        <p id="contacto">Contacto: info@migaleria.com</p>
     </footer>
-
 </body>
 </html>
