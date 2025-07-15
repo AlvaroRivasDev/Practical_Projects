@@ -1,0 +1,11 @@
+
+.nose {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+}
+
+body {
+    background-color: cyan;
+    margin: 0;
+}

@@ -1,0 +1,22 @@
+#titulo {
+    color: rgb(143, 74, 47);
+}
+p.especial {
+    color: chartreuse;
+}
+p.text {
+    color: rgb(197, 8, 8);
+}
+
+div p {
+    color: blueviolet;
+}
+
+div h2, div h3 {
+    color: burlywood;
+}
+
+* {
+    font-size: x-large;
+    color: goldenrod;
+}

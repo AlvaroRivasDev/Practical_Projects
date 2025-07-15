@@ -1,0 +1,18 @@
+body {
+    background-color: #ffff;
+    color: #333333;
+    font-family:'Georgia', serif;
+}
+.texto-principal{
+    color: #333333;
+    font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+}
+
+p, li{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+#ingredients, .ingredientes {
+    color: #a3b1ba;
+}
