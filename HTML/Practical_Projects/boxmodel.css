@@ -1,11 +1,5 @@
-
-.nose {
-    width: 250px;
-    height: 250px;
-    background-color: white;
-}
-
-body {
-    background-color: cyan;
-    margin: 0;
+p {
+    padding: 15px;
+    border: 3px dotted blue;
+    margin: 25px;
 }
