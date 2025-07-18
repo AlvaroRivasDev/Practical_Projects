@@ -8,3 +8,22 @@ li {
     height: 30px;
     width: 10px;
 }
+
+.contenedor-caja{
+    background-color: grey;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 50px auto;
+    position: relative;
+}
+.icono-flotante{
+    background-color: red;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right:5px;
+
+}
