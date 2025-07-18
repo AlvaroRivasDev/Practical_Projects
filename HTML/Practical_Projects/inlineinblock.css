@@ -1,0 +1,10 @@
+
+li {
+    background-color: aqua;
+    display: inline-block;
+    padding: 15px;
+    border: 3px solid black;
+    margin: 21px;
+    height: 30px;
+    width: 10px;
+}
