@@ -1,0 +1,12 @@
+.image-gallery{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+    
+}

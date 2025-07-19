@@ -1,0 +1,23 @@
+.tarjeta{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.tarjeta-testimonio{
+    padding: 20px;
+    border: solid 1px #ccc;
+    margin: 10px;
+    width: 300px;
+    max-width: 300px;
+    position: relative;
+}
+
+.icono-cita{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 3em;
+    color: #ddd;
+    z-index: 1;
+}
