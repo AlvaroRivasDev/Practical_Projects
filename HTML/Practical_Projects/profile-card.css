@@ -13,7 +13,10 @@ p {
     background-color:#f8f9fa;
     border-radius: 12px;
     padding: 64px;
-
+    width: 600px;
+    height: 400px;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .profile-image{

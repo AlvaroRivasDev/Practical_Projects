@@ -8,5 +8,70 @@ img{
     border: 1px solid blue;
     height: 100px;
     width: 100px;
-    
 }
+
+
+
+
+css
+    /* Regla universal: ¡Siempre útil! */
+    * {
+        box-sizing: border-box; /* Asegura que padding y border se incluyan en el width/height */
+    }
+
+    body {
+        font-family: 'Inter', sans-serif; /* Un tipo de fuente limpio */
+        margin: 20px; /* Un pequeño margen para que no esté pegado al borde */
+        display: flex; /* Usaremos flexbox para el body para centrar el contenedor principal */
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh; /* Para que ocupe casi toda la altura de la ventana */
+        background-color: #f0f2f5; /* Un fondo suave */
+    }
+
+    .flex-container {
+        border: 2px solid #3498db; /* Borde para visualizar el contenedor */
+        background-color: #ecf0f1; /* Fondo claro para el contenedor */
+        padding: 20px;
+        width: 80%; /* Ancho del contenedor */
+        max-width: 800px; /* Ancho máximo para pantallas grandes */
+        min-height: 300px; /* Altura mínima para visualizar */
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        /* Aquí es donde aplicaremos display: flex; en el siguiente paso */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .flex-item {
+        background-color: #2ecc71; /* Un color de fondo para las cajas */
+        color: white; /* Texto blanco */
+        padding: 20px;
+        margin: 10px; /* Margen entre las cajas */
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        min-width: 100px; /* Tamaño mínimo para las cajas */
+        height: 80px; /* Altura fija para las cajas */
+        display: flex; /* Usaremos flexbox dentro de cada item para centrar su propio texto */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Estilos específicos para cada caja (opcional, para diferenciarlas) */
+    .item-1 { background-color: #e74c3c; }
+    .item-2 { background-color: #f1c40f; }
+    .item-3 { background-color: #9b59b6; }
+    .item-4 { background-color: #34495e; }
+    .item-5 { background-color: #1abc9c; }
+    
+    .contenedor-central{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contenedor-centrado{
+        border: 3px solid darkblue;
+
+    }
