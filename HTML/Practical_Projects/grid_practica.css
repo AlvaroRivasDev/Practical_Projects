@@ -1,0 +1,98 @@
+        /* Regla universal: ¡Siempre útil! */
+        * {
+            box-sizing: border-box; /* Ensures padding and border are included in width/height */
+            margin: 0; /* Resets default browser margins */
+            padding: 0; /* Resets default browser paddings */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Applies the Inter font */
+            line-height: 1.6; /* Line spacing for better readability */
+            color: #333; /* General text color */
+            background-color: #f0f2f5; /* Soft background color for the page */
+            display: flex; /* Use flexbox to center the grid container */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensures the body takes at least 100% of the viewport height */
+        }
+
+    .grid-container {
+    display: grid;
+    /* Define 2 columnas: una para el sidebar (ej. 200px) y otra para el contenido principal (el resto) */
+    grid-template-columns: 200px 1fr; 
+    
+    /* Define 3 filas: header, el área principal (sidebar/main), y footer */
+    grid-template-rows: auto 1fr auto; 
+    
+    /* Espacio entre celdas */
+    gap: 2px; 
+    
+    /* Define las áreas de la cuadrícula de forma semántica y consistente con 2 columnas */
+    grid-template-areas:
+        "header header"  /* El header abarca ambas columnas */
+        "sidebar main"   /* Sidebar en la primera columna, Main en la segunda */
+        "footer footer"; /* El footer abarca ambas columnas */
+
+    /* Puedes mantener justify-content: center; si quieres que la cuadrícula completa se centre */
+    justify-content: center;
+    align-items: stretch; /* También puedes centrar verticalmente la cuadrícula si hay espacio */
+
+    /* Otros estilos del contenedor */
+    border: 2px solid #3498db;
+    background-color: hsl(192, 15%, 94%);
+    padding: 0px;
+    width: 90%;
+    max-width: 1000px;
+    min-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+        
+
+        .grid-item {
+            background-color: #2ecc71; /* Background color for the boxes */
+            color: white; /* White text */
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            /* Use flexbox within each item to center its own text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: auto;
+        }
+
+        /* Specific styles for each box (optional, to differentiate them) */
+        .item-1 { background-color: #e74c3c; } /* Header */
+        .item-2 { background-color: #f1c40f; } /* Sidebar */
+        .item-3 { background-color: #9b59b6; } /* Main Content */
+        .item-4 { background-color: #34495e; } /* Ad */
+        .item-5 { background-color: #1abc9c; } /* Footer */
+        .item-6 { background-color: #d35400; }
+        .item-7 { background-color: #c0392b; }
+        
+    
+
+        .item-1 { 
+    grid-area: header; /* El header se coloca en el área "header" */
+    background-color: #e74c3c;}
+
+        .item-2 { 
+    grid-area: sidebar; /* El sidebar se coloca en el área "sidebar" */
+    background-color: #f1c40f;
+}
+        
+
+        .item-3 { 
+    grid-area: main; /* El main content se coloca en el área "main" */
+    background-color: #9b59b6;
+}
+
+        .item-5 { 
+    grid-area: footer; /* El footer se coloca en el área "footer" */
+    background-color: #1abc9c;
+}
