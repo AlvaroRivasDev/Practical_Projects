@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* 1. Contenedor de las Tarjetas (FLEX CONTAINER para organizar las tarjetas entre sí) */
+.contenedor-tarjetas {
+    display: flex; /* Para poner las tarjetas en una fila */
+    flex-wrap: wrap; /* Para que las tarjetas salten a la siguiente línea si no caben */
+    justify-content: center; /* Para centrar las tarjetas horizontalmente en el contenedor */
+    gap: 20px; /* Espacio entre las tarjetas (CSS moderno, mejor que margin en cada tarjeta para el layout flex) */
+    padding: 20px; /* Un poco de padding alrededor del grupo de tarjetas */
+}
+
+/* 2. Contenedor Principal de la Tarjeta (.producto-card) */
+.producto-card {
+    width: 300px; /* Ancho fijo para cada tarjeta */
+    /* max-width: 100%; */ /* Opcional: para que no se desborde en pantallas muy pequeñas */
+    padding: 15px; /* Padding interno */
+    border: 1px solid #ddd; /* Borde sutil */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Efecto de sombra */
+    background-color: white; /* Fondo blanco para las tarjetas */
+    text-align: center; /* Centra el texto y la imagen si no son flex items */
+
+    /* CLAVE: Convertir la tarjeta en un Contenedor Flex para su contenido interno */
+    display: flex;
+    flex-direction: column; /* Organiza los ítems internos de arriba hacia abajo */
+    align-items: center; /* Centra los ítems internos horizontalmente (en el eje transversal) */
+    /* justify-content: space-between; /* Podrías usar esto si quieres que los elementos se separen verticalmente */
+    /* gap: 10px; /* Otra opción para espacio vertical entre los elementos internos */
+
+    /* CLAVE para el posicionamiento de la etiqueta de oferta */
+    position: relative; /* Hace de esta tarjeta el punto de origen para el icono absoluto */
+    overflow: hidden; /* Oculta cualquier parte de la etiqueta que se salga de la tarjeta */
+}
+
+/* 3. Imagen del Producto */
+.producto-imagen {
+    width: 100%; /* Ocupa todo el ancho de su padre (la tarjeta) */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Para que la imagen cubra el área sin distorsionarse */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+/* 4. Título del Producto */
+.producto-titulo {
+    font-size: 1.5em; /* Más grande */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 10px; /* Espacio debajo del título */
+    color: #333;
+}
+
+/* 5. Descripción del Producto */
+.producto-descripcion {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px; /* Espacio debajo de la descripción */
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio restante si usas justify-content */
+}
+
+/* 6. Precio del Producto */
+.producto-precio {
+    font-size: 1.8em; /* Aún más grande */
+    font-weight: bold; /* Negrita */
+    color: #28a745; /* Color llamativo (verde) */
+    margin-top: auto; /* Empuja el precio hacia abajo si hay espacio flexible */
+}
+
+/* 7. Etiqueta de "Oferta" (Uso de position) */
+.etiqueta-oferta {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px; /* Un poco de padding para que el texto no se pegue al borde */
+    border-radius: 0 0 0 5px; /* Opcional: redondeado solo en la esquina inferior izquierda */
+    font-size: 0.8em;
+    font-weight: bold;
+
+    /* ¡CLAVE: Posicionamiento Absoluto! */
+    position: absolute; /* Sacado del flujo normal */
+    top: 10px;          /* 10px desde el borde superior de la tarjeta (su padre 'relative') */
+    right: 10px;         /* 10px desde el borde derecho de la tarjeta (su padre 'relative') */
+    z-index: 2;         /* Asegura que esté por encima de la imagen y otros contenidos */
+}
