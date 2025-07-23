@@ -1,0 +1,62 @@
+/* Estilos generales (para todos los tamaños, o "mobile first") */
+body{
+    
+    font-family: Arial, sans-serif;
+    display: flex; /* Para centrar la caja responsive si no hay más contenido */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Para que ocupe toda la altura y el centrado funcione */
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.responsive-box {
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+
+}
+.item-responsive {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Estilos responsive aquí */
+    height: 100px;
+    width: 100%;
+
+}
+@media screen and (min-width: 600px) {
+    .responsive-box{
+        flex-direction: row;
+    }
+    .item-responsive{
+        flex: 1;
+        width: auto;
+
+    }
+}
+@media screen and (min-width: 900px) {
+    .responsive-box{
+        background-color: lightgreen;
+    }
+    .item-responsive{
+        width: 30%;
+    }
+}
+
+/* MEDIA QUERY: Estilos aplicados solo si el ancho de pantalla es de 768px o más */
+@media screen and (min-width: 768px) {
+    body{
+        background-color: lightgreen; /* Cambia a verde en tablets y arriba */
+    }
+}
+/* MEDIA QUERY: Estilos aplicados solo si el ancho de pantalla es de 1024px o más */
+@media screen and (min-width: 1024) {
+    body{
+        background-color: lightcoral; /* Cambia a coral en escritorios */
+    }
+}
