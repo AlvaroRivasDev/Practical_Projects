@@ -205,3 +205,89 @@ body {
     font-size: 1rem; /* Tamaño de fuente para el párrafo de la tarjeta */
     color: #666;
 }
+
+/* --- Responsive Design: Media Queries --- */
+
+        /* Estilos para pantallas pequeñas (móviles) - Mobile-First */
+        /* Estos estilos serán sobrescritos por reglas más específicas para pantallas grandes */
+
+        /* Ajustes para el encabezado en pantallas pequeñas */
+
+        @media (max-width: 767px) { /* Se aplica a pantallas de hasta 767px de ancho */
+            .main-header{
+                flex-direction: column; /* Apila el logo y la navegación en columna */
+                text-align: center; /* Centra el contenido del header */
+                padding: 1rem;/* Ajusta el padding para móviles */
+            }
+            .main-header .main-nav ul{
+                flex-direction: column;  /* Apila los ítems de navegación en columna */
+                gap: 0.8rem; /* Reduce el espacio entre ítems */
+                margin-top: 1rem; /* Margen superior para separarlo del logo */
+            }
+        }
+        
+ @media (max-width: 767px) {
+            .hero-section {
+                padding: 2rem 1rem; /* Reduce el padding para móviles */
+                flex-direction: column; /* Asegura que se apilen verticalmente */
+                gap: 1.5rem; /* Ajusta el espacio entre el contenido y la imagen */
+                min-height: auto; /* Permite que la altura se ajuste al contenido */
+            }
+
+            .hero-content {
+                text-align: center; /* Centra el texto en móviles */
+                flex-basis: auto; /* Permite que el contenido ocupe el ancho necesario */
+            }
+
+            .hero-content h2 {
+                font-size: 2rem; /* Reduce el tamaño del título para móviles */
+            }
+
+            .hero-content p {
+                font-size: 1rem; /* Reduce el tamaño del párrafo */
+            }
+
+            .hero-image {
+                flex-basis: auto; /* Permite que la imagen ocupe el ancho necesario */
+            }
+        }
+
+        /* Ajustes para la Sección de Características en pantallas pequeñas */
+        @media (max-width: 767px) {
+            .features-section h2 {
+                font-size: 1.8rem; /* Reduce el tamaño del título de la sección */
+                margin-bottom: 2rem;
+            }
+
+            .features-grid {
+                gap: 1rem; /* Reduce el espacio entre tarjetas */
+            }
+
+            .feature-card {
+                padding: 1.5rem; /* Reduce el padding de las tarjetas */
+                flex-basis: 100%; /* Hace que cada tarjeta ocupe el 100% del ancho en móviles */
+                max-width: 300px; /* Opcional: limita el ancho de la tarjeta en móviles si el contenedor es muy grande */
+                margin: 0 auto; /* Centra la tarjeta si tiene max-width */
+            }
+
+            .feature-icon {
+                font-size: 2.5rem; /* Ajusta el tamaño del icono */
+            }
+
+            .feature-card h3 {
+                font-size: 1.3rem; /* Ajusta el tamaño del título de la tarjeta */
+            }
+        }
+
+        /* Estilos para Tablets (ej. entre 768px y 1023px) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .features-grid {
+                /* Asegura que haya 2 tarjetas por fila en tablets */
+                grid-template-columns: repeat(2, 1fr); /* Si usaras Grid aquí */
+                /* O con Flexbox, flex-basis se encargará de que quepan 2 */
+            }
+            .feature-card {
+                flex-basis: calc(50% - 1rem); /* 2 tarjetas por fila con gap de 2rem */
+            }
+        }
+        
