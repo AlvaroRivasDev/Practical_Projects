@@ -213,7 +213,7 @@ body {
 
         /* Ajustes para el encabezado en pantallas pequeñas */
 
-        @media (max-width: 767px) { /* Se aplica a pantallas de hasta 767px de ancho */
+        @media screen and (max-width: 767px) { /* Se aplica a pantallas de hasta 767px de ancho */
             .main-header{
                 flex-direction: column; /* Apila el logo y la navegación en columna */
                 text-align: center; /* Centra el contenido del header */
